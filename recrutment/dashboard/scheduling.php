@@ -67,6 +67,7 @@
           <th>#</th>
           <th><input type="checkbox" name="" value=""></th>
           <th>candidate name</th>
+          <th>aplication Rating</th>
           <th>Date</th>
           <th>Time</th>
         </tr>
@@ -76,6 +77,7 @@
           <td>1</td>
           <th><input type="checkbox" name="" value=""></th>
           <td>Mark</td>
+          <td>10</td>
           <td>yyyy/mm/dd</td>
           <td>hh:mm:AM</td>
         </tr>
@@ -83,6 +85,7 @@
           <td>2</td>
           <th><input type="checkbox" name="" value=""></th>
           <td>Jacob</td>
+          <td>8</td>
           <td>yyyy/mm/dd</td>
           <td>hh:mm:AM</td>
         </tr>
@@ -90,6 +93,7 @@
           <td>3</td>
           <th><input type="checkbox" name="" value=""></th>
           <td>Larry </td>
+          <td>5</td>
           <td>yyyy/mm/dd</td>
           <td>hh:mm:AM</td>
         </tr>

@@ -60,7 +60,7 @@
 </form>
 
 
-<p class="text-right">Criteria list for <strong>UI engineer</strong></p>
+<p class="text-right">Criterias list for evaluating<strong>UI engineer</strong></p>
 <table class="table table-hover">
   <thead>
     <tr>
