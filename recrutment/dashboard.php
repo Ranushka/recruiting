@@ -9,7 +9,7 @@
 
 <div class="container-narrow">
 
-  <div class="tabbable tabs-top">
+  <div class="tabbable tabs-left">
 
 
     <ul class="nav nav-tabs">
@@ -19,7 +19,6 @@
       <li class=""><a href="#lD" data-toggle="tab">Add Criteria</a></li>
       <li class=""><a href="#lE" data-toggle="tab">List Applicants</a></li>
     </ul>
-
 
 
     <div class="tab-content">
@@ -47,13 +46,6 @@
     </div>
   </div>
 </div> <!-- class="container-narrow" -->
-
-
-
-
-
-
-
 
 
 
