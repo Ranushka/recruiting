@@ -7,7 +7,7 @@
 
 
 
-<div class="container-narrow">
+<div class="container">
 
   <div class="tabbable tabs-left">
 
@@ -23,19 +23,19 @@
 
     <div class="tab-content">
 
-      <div class="tab-pane active" id="lA">
+      <div class="tab-pane active container-narrow" id="lA">
         <?php include_once 'dashboard/jobPosting.php';?>
       </div>
 
-      <div class="tab-pane" id="lB">
+      <div class="tab-pane container-narrow" id="lB">
         <?php include_once 'dashboard/interviewer.php';?>
       </div>
 
-      <div class="tab-pane" id="lC">
+      <div class="tab-pane container-narrow" id="lC">
         <?php include_once 'dashboard/scheduling.php';?>
       </div>
 
-      <div class="tab-pane" id="lD">
+      <div class="tab-pane container-narrow" id="lD">
         <?php include_once 'dashboard/defineCriteria.php';?>
       </div>
 

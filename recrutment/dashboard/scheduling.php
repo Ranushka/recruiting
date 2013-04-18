@@ -1,26 +1,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <form id="interviewer" class="form-horizontal">
   <fieldset>
     <legend>Interviews scheduling</legend>

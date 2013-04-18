@@ -3,53 +3,8 @@
 
 
 
-<style type="text/css" media="screen">
 
-.viewA{
-
-  position: absolute;
-
-
-}
-
-</style>
-
-
-
-
-
-<script type="text/javascript">
-jQuery(document).ready(function()
-{
-
-  // tooltip demo
-  $('.tooltip-demo').tooltip({
-    selector: "a[data-toggle=tooltip]"
-  })
-
-
-
-
-
-//   jQuery(".ApplicantRating").hover(
-//     function()
-//     { 
-//       var unicApplicantId = $(this).parent().attr("id");
-//       $(this).append($("<a href='#applicant1' role='button' class='btn btn-mini viewA' data-toggle='modal'>View Application</a>")); },
-//     function()
-//     { $(this).find(".viewA").remove(); }
-//   );
-
-
-});
-
-
-
-</script>
-
-
-
-<form id="defineCriteria" class="form-horizontal">
+<form id="defineCriteria" class="form-horizontal container-narrow">
   <fieldset>
     <legend>List Applicants</legend>
 
@@ -85,6 +40,7 @@ jQuery(document).ready(function()
       <th>Application Rating</th>
       <th>Interviewed</th>
       <th>Interview Rating</th>
+      <th>view Application</th>
     </tr>
   </thead>
   <tbody>
@@ -102,6 +58,7 @@ jQuery(document).ready(function()
       </td>
       <td>no</td>
       <td>5</td>
+      <td><a href="#applicant1M" role="button" class="btn btn-mini btn-success" data-toggle="modal">Preview</a></td>
     </tr>
 
     <tr id="applicant2">
@@ -118,6 +75,7 @@ jQuery(document).ready(function()
       </td>
       <td>dd/mm/yyyy</td>
       <td>7</td>
+      <td><a href="#applicant2M" role="button" class="btn btn-mini btn-success" data-toggle="modal">Preview</a></td>
     </tr>
 
     <tr id="applicant3">
@@ -134,20 +92,205 @@ jQuery(document).ready(function()
       </td>
       <td>dd/mm/yyyy</td>
       <td>3</td>
+      <td><a href="#applicant3M" role="button" class="btn btn-mini btn-success" data-toggle="modal">Preview</a></td>
     </tr>
   </tbody>
 </table>
 
 
-
-
+ 
 
 
 <!-- Modal Posting Jobs Preview-->
-<div id="applicant1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="applicant1M" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="PostingJobsPreviewModal" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">preview</h3>
+    <h3 id="PostingJobsPreviewModal">applicant 1 Modle</h3>
+  </div>
+  <div class="modal-body">
+    
+    <table class="table table-hover">
+  <tbody>
+    <tr>
+      <td>First Name</td>
+      <td>Johon</td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td>Doe</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <td>Eddress</td>
+      <td>284/27,Gadabuwana Rd, Mriswatha,Piliyandala.10300</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>0776566565</td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>0776566565</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td>ranushka543@gmail.com</td>
+    </tr>
+
+    <hr>
+
+    <tr>
+      <td>Employer</td>
+      <td>Openarc</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>Some Address, Address, Address.</td>
+    </tr>
+    <tr>
+      <td>Supervisor</td>
+      <td>Supervisor name</td>
+    </tr>
+    <tr>
+      <td>supervisor Phone</td>
+      <td>0776566565</td>
+    </tr>
+    <tr>
+      <td>supervisor Email</td>
+      <td>ranushka543@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Duration :</td>
+      <td>dd/yy/-dd/yy</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Responsibilities Responsibilities Responsibilities Responsibilities Responsibilities</td>
+    </tr>
+    <tr>
+      <td>Salary</td>
+      <td>50000</td>
+    </tr>
+    <tr>
+      <td>atachment</td>
+      <td><a href="#applicant2M" role="button" class="btn btn-mini btn-success" data-toggle="modal">Preview</a></td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>  
+
+
+<!-- Modal Posting Jobs Preview-->
+<div id="applicant2M" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="PostingJobsPreviewModal" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="PostingJobsPreviewModal">applicant 1 Modle</h3>
+  </div>
+  <div class="modal-body">
+    
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <td>First Name</td>
+          <td>Johon</td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td>Doe</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>male</td>
+        </tr>
+        <tr>
+          <td>Eddress</td>
+          <td>284/27,Gadabuwana Rd, Mriswatha,Piliyandala.10300</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>0776566565</td>
+        </tr>
+        <tr>
+          <td>Mobile</td>
+          <td>0776566565</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>male</td>
+        </tr>
+        <tr>
+          <td>email</td>
+          <td>ranushka543@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-hover">
+      <tbody> 
+        <tr>
+          <td>Employer</td>
+          <td>Openarc</td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>Some Address, Address, Address.</td>
+        </tr>
+        <tr>
+          <td>Supervisor</td>
+          <td>Supervisor name</td>
+        </tr>
+        <tr>
+          <td>supervisor Phone</td>
+          <td>0776566565</td>
+        </tr>
+        <tr>
+          <td>supervisor Email</td>
+          <td>ranushka543@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Duration :</td>
+          <td>dd/yy/-dd/yy</td>
+        </tr>
+        <tr>
+          <td>Responsibilities</td>
+          <td>Responsibilities Responsibilities Responsibilities Responsibilities Responsibilities</td>
+        </tr>
+        <tr>
+          <td>Salary</td>
+          <td>50000</td>
+        </tr>
+        <tr>
+          <td>atachment</td>
+          <td><a href="#applicant2M" role="button" class="btn btn-mini btn-success" data-toggle="modal">Preview</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>  
+
+
+<!-- Modal Posting Jobs Preview-->
+<div id="applicant3M" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="PostingJobsPreviewModal" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="PostingJobsPreviewModal">applicant 1 Modle</h3>
   </div>
   <div class="modal-body">
     <p>preview Image goes hear</p>

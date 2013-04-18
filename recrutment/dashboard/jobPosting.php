@@ -39,7 +39,7 @@
     <div class="form-actions">
       <button class="btn">Cancel</button>
       <!-- Button to trigger modal PostingJobsPreview trigure-->
-      <a href="#PostingJobsPreview" role="button" class="btn btn-primary" data-toggle="modal">Preview</a>
+      <a href="#PostingJobsPreview" role="button" class="btn btn-success" data-toggle="modal">Preview</a>
       
 
       <hr>

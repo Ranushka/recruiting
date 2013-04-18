@@ -13,14 +13,6 @@
 
 
 
-
-
-
-
-
-
-
-
 <form id="interviewer" class="form-horizontal">
   <fieldset>
     <legend>Interviewer managing</legend>
@@ -88,3 +80,5 @@
     </tr>
   </tbody>
 </table>
+
+
