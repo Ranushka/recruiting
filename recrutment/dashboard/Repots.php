@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+<p>Slect your Report type.</p>
 <div class="tabbable"> <!-- Only required for left/right tabs -->
 
   <ul class="nav nav-tabs">
@@ -29,3 +37,8 @@
   </div>
 
 </div>
+
+
+
+
+
