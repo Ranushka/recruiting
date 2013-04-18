@@ -43,6 +43,10 @@
         <?php include_once 'dashboard/listApplicants.php';?>
       </div>
 
+      <div class="tab-pane" id="lE">
+        <?php include_once 'dashboard/Repots.php';?>
+      </div>
+
     </div>
   </div>
 </div> <!-- class="container-narrow" -->
