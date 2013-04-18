@@ -15,6 +15,7 @@
     <script src="js/less.js"></script>
 
     <script src="js/jquery.js"></script>
+    <script src="js/mediaCheck.js"></script>
 
     
     <style type="text/css">

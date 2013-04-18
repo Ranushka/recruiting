@@ -9,15 +9,16 @@
 
 <div class="container">
 
-  <div class="tabbable tabs-left">
+  <div class="tabbable tabs-left" id="tabbableContainer">
 
-
-    <ul class="nav nav-tabs">
+    <!-- this will hide on screen sixze 467px -->
+    <ul class="nav nav-tabs collapsTabsHids">
       <li class="active"><a href="#lA" data-toggle="tab">Job posting</a></li>
       <li class=""><a href="#lB" data-toggle="tab">Interviewer</a></li>
       <li class=""><a href="#lC" data-toggle="tab">scheduling</a></li>
       <li class=""><a href="#lD" data-toggle="tab">Add Criteria</a></li>
       <li class=""><a href="#lE" data-toggle="tab">List Applicants</a></li>
+      <li class=""><a href="#lF" data-toggle="tab">Repots</a></li>
     </ul>
 
 
@@ -43,7 +44,7 @@
         <?php include_once 'dashboard/listApplicants.php';?>
       </div>
 
-      <div class="tab-pane" id="lE">
+      <div class="tab-pane" id="lF">
         <?php include_once 'dashboard/Repots.php';?>
       </div>
 
