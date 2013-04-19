@@ -7,54 +7,105 @@
 
 
 
-<div class="container">
-
-  <div class="tabbable tabs-left" id="tabbableContainer">
-
-    <!-- this will hide on screen sixze 467px -->
-    <ul class="nav nav-tabs collapsTabsHids">
-      <li class="active"><a href="#lA" data-toggle="tab">Job posting</a></li>
-      <li class=""><a href="#lB" data-toggle="tab">Interviewer</a></li>
-      <li class=""><a href="#lC" data-toggle="tab">scheduling</a></li>
-      <li class=""><a href="#lD" data-toggle="tab">Add Criteria</a></li>
-      <li class=""><a href="#lE" data-toggle="tab">List Applicants</a></li>
-      <li class=""><a href="#lF" data-toggle="tab">Repots</a></li>
-    </ul>
 
 
-    <div class="tab-content">
 
-      <div class="tab-pane active container-narrow" id="lA">
-        <?php include_once 'dashboard/jobPosting.php';?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-narrow">
+
+
+
+<form id="defineCriteria" class="form-horizontal container-narrow">
+  <fieldset>
+    <legend>List Applicants</legend>
+
+    <div class="control-group">
+      <label class="control-label" for="SelectJobTitle">Select Job title</label>
+      <div class="controls">
+        <select id="SelectJobTitle" autofocus required>
+          <option>-select job title</option>
+          <option>PHP Programmer</option>
+          <option>Graphic designer</option>
+          <option>UI engineer</option>
+          <option>UX developer</option>
+        </select>
       </div>
-
-      <div class="tab-pane container-narrow" id="lB">
-        <?php include_once 'dashboard/interviewer.php';?>
-      </div>
-
-      <div class="tab-pane container-narrow" id="lC">
-        <?php include_once 'dashboard/scheduling.php';?>
-      </div>
-
-      <div class="tab-pane container-narrow" id="lD">
-        <?php include_once 'dashboard/defineCriteria.php';?>
-      </div>
-
-      <div class="tab-pane" id="lE">
-        <?php include_once 'dashboard/listApplicants.php';?>
-      </div>
-
-      <div class="tab-pane" id="lF">
-        <?php include_once 'dashboard/Repots.php';?>
-      </div>
-
     </div>
-  </div>
+
+    <div class="control-group">
+      <label class="control-label" for="SelectAplicent">Select Aplicent</label>
+      <div class="controls">
+        <select id="SelectAplicent" required>
+          <option>-select job title</option>
+          <option>PHP Programmer</option>
+          <option>Graphic designer</option>
+          <option>UI engineer</option>
+          <option>UX developer</option>
+        </select>
+      </div>
+    </div>
+
+
+    <hr>
+    <p>You are evaluating <strong>xyzv someoneelse</strong> as UX developer</p>
+
+    <div class="control-group">
+      <label class="control-label" for="SelectAplicent">Criteria one for Aplicent</label>
+      <div class="controls">
+
+
+
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="SelectAplicent">Criteria two for Aplicent</label>
+      <div class="controls">
+        *******
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="SelectAplicent">Criteria three for Aplicent</label>
+      <div class="controls">
+        *******
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="SelectAplicent">Criteria four for Aplicent</label>
+      <div class="controls">
+        *******
+      </div>
+    </div>
+
+
+
+
+    
+    <div class="form-actions">
+      <button type="submit" class="btn btn-success">evaluate <strong>xyzv someoneelse</strong> as UX developer</button>
+    </div>
+  </fieldset>
+</form>
+
+
+
+
+
 </div> <!-- class="container-narrow" -->
-
-
-
-
 
 
 
@@ -69,3 +120,11 @@
 </div> <!-- class="container-narrow" -->
 
 <?php include_once 'template/footer.php';?>
+
+
+
+
+
+
+
+
