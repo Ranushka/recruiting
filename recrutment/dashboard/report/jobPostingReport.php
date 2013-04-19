@@ -32,7 +32,7 @@
               [
                 {
                   type: 'pie',
-                  name: 'Browser share',
+                  name: 'applyed jobs',
                   data: 
                   [
                       ['PHP Programmer',   30],
@@ -50,7 +50,7 @@
                 }
               ]
           });
-            });</div>
+            });
     
 
     </script>

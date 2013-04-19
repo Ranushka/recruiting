@@ -21,7 +21,8 @@
 	</div>
 
 	<ul class="nav nav-pills pull-right collapsTabsHids">
-		<li class="active"><a href="index.php">Dashboard</a></li>
+		<li><a href="Rate.php">Rate Aplicent</a></li>
+		<li><a href="index.php">Dashboard</a></li>
 		<li><a href="candidateAplication.php">Candidate Application</a></li>
 		<li><a href="#">Contact</a></li>
 	</ul>
