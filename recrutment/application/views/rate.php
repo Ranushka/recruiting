@@ -1,26 +1,3 @@
-<?php include_once 'template/heder.php';?>
-<body>
-<div class="container-narrow">
-  <?php include_once 'template/nav.php';?>
-</div> <!-- class="container-narrow" -->
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="container-narrow">
@@ -106,22 +83,6 @@
 
 
 </div> <!-- class="container-narrow" -->
-
-
-
-
-
-<div class="container-narrow">
-
-  <div class="footer">
-    <p>© Company 2013</p>
-  </div>
-
-</div> <!-- class="container-narrow" -->
-
-<?php include_once 'template/footer.php';?>
-
-
 
 
 

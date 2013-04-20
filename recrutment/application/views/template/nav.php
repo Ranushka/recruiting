@@ -23,9 +23,9 @@
 			</div>
 
 			<ul class="nav nav-pills pull-right collapsTabsHids">
-				<li><a href="rate.php">Rate Aplicent</a></li>
-				<li><a href="index.php">Dashboard</a></li>
-				<li><a href="candidateAplication.php">Candidate Application</a></li>
+				<li><a href="<?php echo base_url(); ?>index.php/rate">Rate Aplicent</a></li>
+				<li><a href="<?php echo base_url(); ?>index.php/home">Dashboard</a></li>
+				<li><a href="<?php echo base_url(); ?>index.php/candidateAplication">Candidate Application</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
 		  	

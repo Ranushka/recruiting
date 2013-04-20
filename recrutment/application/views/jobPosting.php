@@ -1,6 +1,7 @@
 <div class="tab-pane active container-narrow">
         
   <form id="PostingJobs" class="form-horizontal">
+  <?php echo form_open('email/send'); ?>
     <fieldset>
       <legend>Posting Jobs on Social Media.</legend>
       <div class="control-group">
