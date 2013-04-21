@@ -1,6 +1,9 @@
 <div class="container-narrow">
 
-  <form class="form-horizontal applyingPosition">
+  <?php 
+    echo form_open_multipart('email/send',
+    $attributes = array('class' => 'form-horizontal', 'id' => 'applyingPosition'));
+  ?>
     <fieldset>
       <legend>Please select applying position</legend>
 
@@ -19,13 +22,25 @@
       </div>
 
       <div class="control-group">
-        <label class="control-label" for="FirstName">I'm a human</label>
+        <label class="control-label" for="formCandiFirstName">I'm a human</label>
         <div class="controls">
-          <input type="text" class="input-xlarge" id="FirstName" required>
+          <?php 
+          $vals = array(
+            'word'   => 'Random word',
+            'img_path'   => './captcha/',
+            'img_url'  => 'http://localhost/a/trunk/recrutment/captcha/',
+            'font_path'  => 'http://localhost/a/trunk/recrutment/captcha/KREEMDNA.TTF',
+            'img_width'  => '150',
+            'img_height' => 30,
+            'expiration' => 7200
+            );
+
+          $cap = create_captcha($vals);
+          echo $cap['image'];
+          echo ' <input type="text" class="input-mediumname" captcha" value="" />';
+          ?>
         </div>
       </div>
-
-
 
       <div class="form-actions">
         <button type="submit" class="btn btn-success">Apply</button>
@@ -48,16 +63,38 @@
         <div id="collapseOne" class="accordion-body collapse in">
           <div class="accordion-inner">
             <div class="control-group">
-              <label class="control-label" for="FirstName">First Name</label>
+              <label class="control-label" for="formCandiFirstName">First Name</label>
               <div class="controls">
-                <input type="text" class="input-xlarge" id="FirstName" required>
+                <?php 
+                $formCandiFirstName = array(
+                  'type'        => 'text',
+                  'name'        => 'formCandiFirstName',
+                  'id'          => 'formCandiFirstName',
+                  'class'       => 'input-xlarge',
+                  'maxlength'   => '100',
+                  'required'    => 'required',
+                  'placeholder' => 'johon@mail.com',
+                  );
+                echo form_input($formCandiFirstName);
+                ?>
               </div>
             </div>
 
             <div class="control-group">
-              <label class="control-label" for="LastName">Last Name</label>
+              <label class="control-label" for="formCandiLastName">Last Name</label>
               <div class="controls">
-                <input type="text" class="input-xlarge" id="LastName" required>
+                <?php 
+                $formCandiLastName = array(
+                  'type'        => 'text',
+                  'name'        => 'formCandiLastName',
+                  'id'          => 'formCandiLastName',
+                  'class'       => 'input-xlarge',
+                  'maxlength'   => '100',
+                  'required'    => 'required',
+                  'placeholder' => 'johon@mail.com',
+                  );
+                echo form_input($formCandiLastName);
+                ?>
               </div>
             </div>
 
@@ -65,66 +102,157 @@
               <label class="control-label" for="optionsSex">Gender</label>
               <div class="controls">
                <label class="radio">
-                 <input type="radio" id="optionsSex" name="sex" value="male">Male<br>
-                 <input type="radio" id="optionsSex" name="sex" value="female">Female
+
+
+                 <?php 
+                 $radiomale = array(
+                  'type'        => 'radio',
+                  'name'        => 'newsletter',
+                  'id'          => 'newsletter',
+                  'value'       => 'male',
+                  );
+                 $radiofemale = array(
+                  'type'        => 'radio',
+                  'name'        => 'newsletter',
+                  'id'          => 'newsletter',
+                  'value'       => 'female',
+                  );
+
+                 echo form_checkbox($radiomale);
+                 echo ('Male<br>');
+                 echo form_checkbox($radiofemale);
+                 echo ('Female<br>');
+                 ?>
                </label>
              </div>
            </div>
 
            <div class="control-group">
-             <label class="control-label" for="Street1">Street 1</label>
+             <label class="control-label" for="formCandiStreet1">Street 1</label>
              <div class="controls">
-               <input type="text" class="input-xlarge" id="Street1">
+               <?php 
+               $formCandiStreet1 = array(
+                'type'        => 'text',
+                'name'        => 'formCandiStreet1',
+                'id'          => 'formCandiStreet1',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'placeholder' => 'No543,road,',
+                );
+               echo form_input($formCandiStreet1);
+               ?>
              </div>
            </div>
 
            <div class="control-group">
-             <label class="control-label" for="Street2">Street 2</label>
+             <label class="control-label" for="formCandiStreet2">Street 2</label>
              <div class="controls">
-               <input type="text" class="input-xlarge" id="Street2">
+               <?php 
+               $formCandiStreet2 = array(
+                'type'        => 'text',
+                'name'        => 'formCandiStreet2',
+                'id'          => 'formCandiStreet2',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '200',
+                'placeholder' => 'street Rd,',
+                );
+               echo form_input($formCandiStreet2);
+               ?>
              </div>
            </div>
 
            <div class="control-group">
-             <label class="control-label" for="city">city</label>
+             <label class="control-label" for="formCandicity">city</label>
              <div class="controls">
-               <input type="text" class="input-xlarge" id="city">
+               <?php 
+               $formCandicity = array(
+                'type'        => 'text',
+                'name'        => 'formCandicity',
+                'id'          => 'formCandicity',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'placeholder' => 'TheCity.',
+                );
+               echo form_input($formCandicity);
+               ?>
              </div>
            </div>
 
-             <div class="control-group">
-                <label class="control-label" for="Zipcord">Zip cord</label>
-              <div class="controls">
-                <input type="text" class="input-xlarge" id="Zipcord">
-              </div>
+           <div class="control-group">
+            <label class="control-label" for="formCandiZipcord">Zip cord</label>
+            <div class="controls">
+              <?php 
+              $formCandiZipcord = array(
+                'type'        => 'number',
+                'name'        => 'formCandiZipcord',
+                'id'          => 'formCandiZipcord',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '8',
+                'placeholder' => '10300',
+                );
+              echo form_input($formCandiZipcord);
+              ?>
             </div>
+          </div>
 
-            <div class="control-group">
-              <label class="control-label" for="Phone">Phone</label>
-              <div class="controls">
-                <input type="tel" class="input-xlarge" id="Phone">
-              </div>
+          <div class="control-group">
+            <label class="control-label" for="formCandiPhone">Phone</label>
+            <div class="controls">
+              <?php 
+              $formCandiPhone = array(
+                'type'        => 'tel',
+                'name'        => 'formCandiPhone',
+                'id'          => 'formCandiPhone',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '10',
+                'placeholder' => '011465895',
+                );
+              echo form_input($formCandiPhone);
+              ?>
             </div>
+          </div>
 
-            <div class="control-group">
-              <label class="control-label" for="Mobile">Mobile</label>
-              <div class="controls">
-                <input type="tel" class="input-xlarge" id="Mobile" required>
-              </div>
+          <div class="control-group">
+            <label class="control-label" for="formCandiMobile">Mobile</label>
+            <div class="controls">
+              <?php 
+              $formCandiMobile = array(
+                'type'        => 'tel',
+                'name'        => 'formCandiMobile',
+                'id'          => 'formCandiMobile',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '10',
+                'required'    => 'required',
+                'placeholder' => '072556689',
+                );
+              echo form_input($formCandiMobile);
+              ?>
             </div>
+          </div>
 
-            <div class="control-group">
-              <label class="control-label" for="email">email</label>
-              <div class="controls">
-                <input type="email" class="input-xlarge" id="email" required>
-              </div>
-           </div>
-         </div><!-- <div class="accordion-inner"> -->
-       </div><!-- <div id="collapseOne" class="accordion-body collapse in"> -->
+          <div class="control-group">
+            <label class="control-label" for="formCandiEmail">email</label>
+            <div class="controls">
+              <?php 
+              $formCandiEmail = array(
+                'type'        => 'email',
+                'name'        => 'formCandiEmail',
+                'id'          => 'formCandiEmail',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'required'    => 'required',
+                'placeholder' => 'johon@mail.com',
+                );
+              echo form_input($formCandiEmail);
+              ?>
+            </div>
+          </div>
+        </div><!-- <div class="accordion-inner"> -->
+      </div><!-- <div id="collapseOne" class="accordion-body collapse in"> -->
 
-     </article>
+    </article>
 
-     <article class="accordion-group">
+    <article class="accordion-group">
       <header class="accordion-heading">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
           <h4>Employee history</h4>
@@ -134,44 +262,103 @@
       <div id="collapseTwo" class="accordion-body collapse">
         <div class="accordion-inner">
           <div class="control-group">
-            <label class="control-label" for="Employer">Employer</label>
+            <label class="control-label" for="formCandiEmployerEmail">Employer</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="Employer">
+              <?php 
+              $formCandiEmployerEmail = array(
+                'type'        => 'text',
+                'name'        => 'formCandiEmployerEmail',
+                'id'          => 'formCandiEmployerEmail',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'placeholder' => 'johon doe',
+                );
+              echo form_input($formCandiEmployerEmail);
+              ?>
             </div>
           </div>
 
           <div class="control-group">
-            <label class="control-label" for="Address">Address</label>
+            <label class="control-label" for="formCandiEmployerAddress">Address</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="Address">
+              <?php 
+              $formCandiEmployerAddress = array(
+                'type'        => 'text',
+                'name'        => 'formCandiEmployerAddress',
+                'id'          => 'formCandiEmployerAddress',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '200',
+                'placeholder' => 'no-120,somplase,The City.',
+                );
+              echo form_textarea($formCandiEmployerAddress);
+              ?>
             </div>
           </div>
 
           <div class="control-group">
-            <label class="control-label" for="supervisor">Supervisor</label>
+            <label class="control-label" for="formCandiEmployerSupervisor">Supervisor name</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="supervisor">
+              <?php 
+              $formCandiEmployerSupervisor = array(
+                'name'        => 'formCandiEmployerSupervisor',
+                'id'          => 'formCandiEmployerSupervisor',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '200',
+                'placeholder' => 'tom Johon',
+                );
+              echo form_input($formCandiEmployerSupervisor);
+              ?>
             </div>
           </div>
 
           <div class="control-group">
             <label class="control-label" for="supervisorPhone">supervisor Phone</label>
             <div class="controls">
-              <input type="tel" class="input-xlarge" id="supervisorPhone">
+              <?php 
+              $formCandiEmployerSupervisorPhone = array(
+                'type'        => 'tel',
+                'name'        => 'formCandiEmployerSupervisorPhone',
+                'id'          => 'formCandiEmployerSupervisorPhone',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '10',
+                'placeholder' => '072565454',
+                );
+              echo form_input($formCandiEmployerSupervisorPhone);
+              ?>
             </div>
           </div>
 
           <div class="control-group">
-            <label class="control-label" for="supervisorEmail">supervisor Email</label>
+            <label class="control-label" for="formCandiEmployerSupervisorEmail">supervisor Email</label>
             <div class="controls">
-              <input type="Email" class="input-xlarge" id="supervisorEmail">
+              <?php 
+              $formCandiEmployerSupervisorEmail = array(
+                'type'        => 'email',
+                'name'        => 'formCandiEmployerSupervisorEmail',
+                'id'          => 'formCandiEmployerSupervisorEmail',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'placeholder' => 'supervisor@Email.com',
+                );
+              echo form_input($formCandiEmployerSupervisorEmail);
+              ?>
             </div>
           </div>
 
           <div class="control-group">
-            <label class="control-label" for="Position">Position</label>
+            <label class="control-label" for="formCandiPosition">your Position</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="Position">
+              <?php
+              $formCandiPosition = array(
+                'type'        => 'email',
+                'name'        => 'formCandiPosition',
+                'id'          => 'formCandiPosition',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'placeholder' => 'Designer',
+                );
+              echo form_input($formCandiPosition);
+              ?>
             </div>
           </div>
 
@@ -179,15 +366,37 @@
             <label class="control-label" for="Duration">Duration :</label>
             <div class="controls">
               <div class="control-group">
-                <label class="control-label" for="fromDuration">from date :</label>
+                <label class="control-label" for="formCandiFromDate">from date :</label>
                 <div class="controls">
-                  <input class="input-medium" type="date" id="fromDuration" placeholder=".input-mini">
+                  <?php 
+                  $formCandiFromDate = array(
+                    'type'        => 'date',
+                    'name'        => 'formCandiFromDate',
+                    'id'          => 'formCandiFromDate',
+                    'class'       => 'input-medium',
+                    'maxlength'   => '100',
+                    'required'    => 'required',
+                    'placeholder' => 'yyyy/mm/dd',
+                    );
+                  echo form_input($formCandiFromDate);
+                  ?>
                 </div>
               </div>
               <div class="control-group">
-                <label class="control-label" for="toDuration">from date :</label>
+                <label class="control-label" for="formCandiToDate">from date :</label>
                 <div class="controls">
-                  <input class="input-medium" type="date" id="toDuration" placeholder=".input-mini">
+                  <?php 
+                  $formCandiToDate = array(
+                    'type'        => 'date',
+                    'name'        => 'formCandiToDate',
+                    'id'          => 'formCandiToDate',
+                    'class'       => 'input-medium',
+                    'maxlength'   => '100',
+                    'required'    => 'required',
+                    'placeholder' => 'yyyy/mm/dd',
+                    );
+                  echo form_input($formCandiToDate);
+                  ?>
                 </div>
               </div>
             </div>
@@ -196,21 +405,50 @@
           <div class="control-group">
             <label class="control-label" for="Responsibilites">Responsibilities</label>
             <div class="controls">
-              <textarea class="input-xlarge" id="Responsibilites" rows="3"></textarea>
+              <?php 
+              $formCandiResponsibilites = array(
+                'name'        => 'formCandiResponsibilites',
+                'id'          => 'formCandiResponsibilites',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '200',
+                'placeholder' => 'some Responsibilities you had take care.',
+                );
+              echo form_textarea($formCandiResponsibilites);
+              ?>
             </div>
           </div>
 
           <div class="control-group">
             <label class="control-label" for="Salary">Salary</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="Salary">
+              <?php 
+              $formCandiPosition = array(
+                'type'        => 'number',
+                'name'        => 'formCandiPosition',
+                'id'          => 'formCandiPosition',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '6',
+                'placeholder' => '7000',
+                );
+              echo form_input($formCandiPosition);
+              ?>
             </div>
           </div>
 
           <div class="control-group">
-            <label class="control-label" for="fileInput">Attach a CV</label>
+            <label class="control-label" for="formCandiCV">Attach a CV</label>
             <div class="controls">
-              <input class="input-file" id="fileInput" type="file">
+              <?php 
+              $formCandiCV = array(
+                'type'        => 'file',
+                'name'        => 'formCandiCV',
+                'id'          => 'formCandiCV',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '1000',
+                'placeholder' => 'cv',
+                );
+              echo form_input($formCandiCV);
+              ?>
             </div>
           </div>
         </div><!-- <div class="accordion-inner"> -->

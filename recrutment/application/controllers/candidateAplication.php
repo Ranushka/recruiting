@@ -19,7 +19,7 @@ class CandidateAplication extends CI_Controller {
 			$data['title'] = ucfirst($page); // Capitalize the first letter
 			$data['containerId'] = $page; // Capitalize the first letter
 
-
+			$this->load->helper('captcha');
 			
 			$this->load->view('/template/header', $data);
 			$this->load->view('/template/nav', $data);

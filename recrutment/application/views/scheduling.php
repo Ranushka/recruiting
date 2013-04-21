@@ -1,41 +1,82 @@
 <div class="tab-pane container-narrow active">
 
-  <form id="interviewer" class="form-horizontal">
+  <?php 
+    echo form_open('email/send',
+    $attributes = array('class' => 'form-horizontal container-narrow', 'id' => 'interviewsScheduling'));
+  ?>
     <fieldset>
       <legend>Interviews scheduling</legend>
 
       
       <div class="control-group">
-        <label class="control-label" for="SelectJobTitle">Select Job title</label>
+        <label class="control-label" for="formSelectJobTitle">Select Job title</label>
         <div class="controls">
-          <select class="input-xlarge" id="SelectJobTitle" autofocus>
-            <option>-select job title</option>
-            <option>PHP Programmer</option>
-            <option>Graphic designer</option>
-            <option>UI engineer</option>
-            <option>UX developer</option>
-          </select>
+          <?php 
+          $formSelectJobTitleOptions = array(
+                  ''                => '-select job title-',
+                  'PHPProgrammer'   => 'PHP Programmer',
+                  'Graphicdesigner' => 'Graphic designer',
+                  'UIengineer'      => 'UI engineer',
+                  'UXdeveloper'     => 'UX developer',
+                );
+          echo form_dropdown('formSelectJobTitle', $formSelectJobTitleOptions);
+          ?>
         </div>
       </div>
 
+
       <div class="control-group">
-        <label class="control-label" for="schedulingDate">scheduling Date</label>
+        <label class="control-label" for="formschedulingDate">scheduling Date</label>
         <div class="controls">
-          <input type="date" class="input-xlarge" id="schedulingDate">
+          <?php 
+          $formschedulingDate = array(
+            'type'        => 'date',
+            'name'        => 'formschedulingDate',
+            'id'          => 'formschedulingDate',
+            'class'       => 'input-xlarge',
+            'maxlength'   => '100',
+            'required'    => 'required',
+            'placeholder' => 'yyyy/mm/dd',
+            );
+          echo form_input($formschedulingDate);
+          ?>
         </div>
       </div>
 
-      <div class="control-group">
-        <label class="control-label" for="statingTime">stating time</label>
-        <div class="controls">
-          <input type="time" class="input-xlarge" id="statingTime">
+       <div class="control-group">
+          <label class="control-label" for="formStartDate">start date </label>
+          <div class="controls">
+            <?php 
+              $formStartDate = array(
+                  'type'        => 'date',
+                  'name'        => 'formStartDate',
+                  'id'          => 'formStartDate',
+                  'class'       => 'input-xlarge',
+                  'maxlength'   => '100',
+                  'required'    => 'required',
+                  'placeholder' => 'yyyy/mm/dd',
+                );
+                echo form_input($formStartDate);
+            ?>
+          </div>
         </div>
-      </div>
 
       <div class="control-group">
         <label class="control-label" for="timeGap">time gap</label>
         <div class="controls">
-          <input id="timeGap" class="input-xlarge" type="number" min="0" max="60" step="5" value="15">
+          <?php 
+            $formCriteriaName = array(
+                'type'        => 'number',
+                'name'        => 'formCriteriaName',
+                'id'          => 'formCriteriaName',
+                'class'       => 'input-xlarge',
+                'min'         => '0',
+                'max'         => '100',
+                'step'        => '5',
+                'placeholder' => '10',
+              );
+              echo form_input($formCriteriaName);
+          ?>
         </div>
       </div>
 
@@ -82,44 +123,53 @@
 
 
       <div class="control-group">
-        <label class="control-label" for="AssignInterviewee">Assign interviewee 1</label>
+        <label class="control-label" for="formAssignInterviewee1">Select Job title</label>
         <div class="controls">
-          <select id="AssignInterviewee1" class="input-xlarge">
-            <option>select interviewee</option>
-            <option>johon xmith</option>
-            <option>alen joe</option>
-            <option>helen keneeth</option>
-            <option>hobe pentagon</option>
-            <option>kanadi smith</option>
-          </select>
+          <?php 
+          $formAssignInterviewee1 = array(
+                  ''              => '-select interviewee-',
+                  'johonxmith'    => 'johon xmith',
+                  'alenjoe'       => 'alen joe',
+                  'helenkeneeth'  => 'helen keneeth',
+                  'hobepentagon'  => 'hobe pentagon',
+                  'kanadismith'   => 'kanadi smith',
+                );
+          echo form_dropdown('formSelectJobTitle', $formAssignInterviewee1);
+          ?>
         </div>
       </div>
 
       <div class="control-group">
-        <label class="control-label" for="AssignInterviewee1">Assign interviewee 2</label>
+        <label class="control-label" for="formAssignInterviewee2">Select Job title</label>
         <div class="controls">
-          <select id="AssignInterviewee2" class="input-xlarge">
-            <option>select interviewee</option>
-            <option>johon xmith</option>
-            <option>alen joe</option>
-            <option>helen keneeth</option>
-            <option>hobe pentagon</option>
-            <option>kanadi smith</option>
-          </select>
+          <?php 
+          $formAssignInterviewee2 = array(
+                  ''              => '-select interviewee-',
+                  'johonxmith'    => 'johon xmith',
+                  'alenjoe'       => 'alen joe',
+                  'helenkeneeth'  => 'helen keneeth',
+                  'hobepentagon'  => 'hobe pentagon',
+                  'kanadismith'   => 'kanadi smith',
+                );
+          echo form_dropdown('formSelectJobTitle', $formAssignInterviewee2);
+          ?>
         </div>
       </div>
 
       <div class="control-group">
-        <label class="control-label" for="AssignInterviewee">Assign interviewee 3</label>
+        <label class="control-label" for="formAssignInterviewee3">Select Job title</label>
         <div class="controls">
-          <select id="AssignInterviewee3" class="input-xlarge">
-            <option>select interviewee</option>
-            <option>johon xmith</option>
-            <option>alen joe</option>
-            <option>helen keneeth</option>
-            <option>hobe pentagon</option>
-            <option>kanadi smith</option>
-          </select>
+          <?php 
+          $formAssignInterviewee3 = array(
+                  ''              => '-select interviewee-',
+                  'johonxmith'    => 'johon xmith',
+                  'alenjoe'       => 'alen joe',
+                  'helenkeneeth'  => 'helen keneeth',
+                  'hobepentagon'  => 'hobe pentagon',
+                  'kanadismith'   => 'kanadi smith',
+                );
+          echo form_dropdown('formSelectJobTitle', $formAssignInterviewee3);
+          ?>
         </div>
       </div>
 

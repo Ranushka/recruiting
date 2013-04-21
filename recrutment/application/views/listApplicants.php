@@ -1,19 +1,33 @@
 <div class="tab-pane active" id="lE">
 
-  <form id="defineCriteria" class="form-horizontal container-narrow">
+  <?php 
+    echo form_open('email/send',
+    $attributes = array('class' => 'form-horizontal container-narrow', 'id' => 'defineCriteria'));
+  ?>
     <fieldset>
       <legend>List Applicants</legend>
 
       <div class="control-group">
-        <label class="control-label" for="SelectJobTitle">Select Job title</label>
+        <label class="control-label" for="formSelectJobTitle">Select Job title</label>
         <div class="controls">
-          <select id="SelectJobTitle" autofocus>
-            <option>-select job title</option>
-            <option>PHP Programmer</option>
-            <option>Graphic designer</option>
-            <option>UI engineer</option>
-            <option>UX developer</option>
-          </select>
+          <?php 
+            // $formSelectJobTitle = array(
+            //     'name'        => 'formSelectJobTitle',
+            //     'id'          => 'formSelectJobTitle',
+            //     'class'       => 'input-xlarge',
+            //     'autofocus'   => 'autofocus',
+            //     'required'    => 'required',
+            //   );
+            //   echo form_dropdown($formJobTitle);
+          $formSelectJobTitleOptions = array(
+                  ''                => '-select job title-',
+                  'PHPProgrammer'   => 'PHP Programmer',
+                  'Graphicdesigner' => 'Graphic designer',
+                  'UIengineer'      => 'UI engineer',
+                  'UXdeveloper'     => 'UX developer',
+                );
+          echo form_dropdown('formSelectJobTitle', $formSelectJobTitleOptions,  $formSelectJobTitle);
+          ?>
         </div>
       </div>
       

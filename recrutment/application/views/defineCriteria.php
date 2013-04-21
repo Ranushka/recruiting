@@ -1,33 +1,63 @@
 <div class="tab-pane container-narrow active">
   
-  <form id="defineCriteria" class="form-horizontal">
+  <?php 
+    echo form_open('email/send',
+    $attributes = array('class' => 'form-horizontal container-narrow', 'id' => 'defineCriteria'));
+  ?>
     <fieldset>
       <legend>Define Criteria</legend>
   
       <div class="control-group">
-        <label class="control-label" for="SelectJobTitle">Select Job title</label>
+        <label class="control-label" for="formSelectJobTitle">Select Job title</label>
         <div class="controls">
-          <select id="SelectJobTitle" autofocus>
-            <option>-select job title</option>
-            <option>PHP Programmer</option>
-            <option>Graphic designer</option>
-            <option>UI engineer</option>
-            <option>UX developer</option>
-          </select>
+          <?php 
+          $formSelectJobTitleOptions = array(
+                  ''                => '-select job title-',
+                  'PHPProgrammer'   => 'PHP Programmer',
+                  'Graphicdesigner' => 'Graphic designer',
+                  'UIengineer'      => 'UI engineer',
+                  'UXdeveloper'     => 'UX developer',
+                );
+          echo form_dropdown('formSelectJobTitle', $formSelectJobTitleOptions);
+          ?>
         </div>
       </div>
   
       <div class="control-group">
-        <label class="control-label" for="criteriaName">Criteria name</label>
+        <label class="control-label" for="formCriteriaName">Criteria name</label>
         <div class="controls">
-          <input type="text" class="input-xlarge" id="criteriaName" required>
+          <?php 
+            $formCriteriaName = array(
+                'type'        => 'text',
+                'name'        => 'formCriteriaName',
+                'id'          => 'formCriteriaName',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'required'    => 'required',
+                'placeholder' => 'Creativness',
+              );
+              echo form_input($formCriteriaName);
+          ?>
         </div>
       </div>
   
       <div class="control-group">
         <label class="control-label" for="defineWatage">Define wattage</label>
         <div class="controls">
-          <input id="defineWatage" class="input-xlarge" type="number" min="0" max="100" step="5" value="10">
+          <?php 
+            $formCriteriaName = array(
+                'type'        => 'number',
+                'name'        => 'formCriteriaName',
+                'id'          => 'formCriteriaName',
+                'class'       => 'input-xlarge',
+                'min'         => '0',
+                'max'         => '100',
+                'step'        => '5',
+                'value'       => '10',
+                'placeholder' => '10',
+              );
+              echo form_input($formCriteriaName);
+          ?>
         </div>
       </div>
       

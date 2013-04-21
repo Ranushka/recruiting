@@ -1,32 +1,64 @@
-
-
-
-
 <div class="tab-pane container-narrow active">
   
-
-  <form id="interviewer" class="form-horizontal">
+  <?php 
+    echo form_open_multipart('email/send',
+    $attributes = array('class' => 'form-horizontal', 'id' => 'interviewer'));
+  ?>
     <fieldset>
       <legend>Interviewer managing</legend>
 
       <div class="control-group">
-        <label class="control-label" for="InterviewerName">Interviewer name</label>
+        <label class="control-label" for="formInterviewerName">Interviewer name</label>
         <div class="controls">
-          <input type="text" class="input-xlarge" id="InterviewerName" required autofocus>
+          <?php 
+            $formInterviewerName = array(
+                'type'        => 'text',
+                'name'        => 'formInterviewerName',
+                'id'          => 'formInterviewerName',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'autofocus'   => 'autofocus',
+                'required'    => 'required',
+                'placeholder' => 'Johon Doe',
+              );
+              echo form_input($formInterviewerName);
+          ?>
         </div>
       </div>
 
       <div class="control-group">
-        <label class="control-label" for="InterviewerPhone">Phone number</label>
+        <label class="control-label" for="formInterviewerPhone">Phone number</label>
         <div class="controls">
-          <input type="tel" class="input-xlarge" id="InterviewerPhone" required>
+          <?php 
+            $formInterviewerPhone = array(
+                'type'        => 'tel',
+                'name'        => 'formInterviewerPhone',
+                'id'          => 'formInterviewerPhone',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'required'    => 'required',
+                'placeholder' => '071545454',
+              );
+              echo form_input($formInterviewerPhone);
+          ?>
         </div>
       </div>
 
       <div class="control-group">
-        <label class="control-label" for="InterviewerEmail">Interviewer Email</label>
+        <label class="control-label" for="formInterviewerEmail">Interviewer Email</label>
         <div class="controls">
-          <input type="email" class="input-xlarge" id="InterviewerEmail" required>
+          <?php 
+            $formInterviewerEmail = array(
+                'type'        => 'email',
+                'name'        => 'formInterviewerEmail',
+                'id'          => 'formInterviewerEmail',
+                'class'       => 'input-xlarge',
+                'maxlength'   => '100',
+                'required'    => 'required',
+                'placeholder' => 'johon@mail.com',
+              );
+              echo form_input($formInterviewerEmail);
+          ?>
         </div>
       </div>
 
