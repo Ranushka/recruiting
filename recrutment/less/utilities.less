@@ -1,0 +1,137 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// Visibility
+.invisible {
+  visibility: hidden;
+}
+
+// For Affix plugin
+.affix {
+  position: fixed;
+}
+
+// to get the full use of bolcklevel comment
+#PostingJobs .form-actions{
+  padding-left: 20px;
+}
+
+// control the inner lables and inputs of the form-control
+.control-group .controls .control-group .control-label{
+  width: 90px
+}
+// control the inner lables and inputs of the form-control
+.control-group .controls .control-group .controls{
+
+margin-left: 120px;
+}
+
+.vertical(@startColor: #555, @endColor: #333) {
+    background-color: mix(@startColor, @endColor, 60%);
+    background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+
+.horizontal(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to right, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+.tabbableContainer{
+  .active a{
+  border-right:thick #FFF solid;
+  .box-shadow(-2px 1px 13px rgba(204, 204, 204, 0.65));
+  .horizontal(@startColor: rgba(204, 204, 204, 0.31), @endColor: (rgba(0, 0, 0, 0)));
+
+    p{
+        text-align: center;
+        margin-bottom: 0;
+        img{
+          width: 24px;
+        }
+      }
+      div{
+        text-align: center;
+      }
+  }
+}
+
+
+
+//linear-gradient(to right, rgba(204, 204, 204, 0.31), rgba(0, 0, 0, 0))
+
+
+
+// to alocate space to the main navigation
+.reportsContainer{
+  margin-left: 14%;
+}
+
+// alter the applying Position section
+
+.applyingPosition{
+	.radio small{
+		color: #999;
+	}
+}
+
+.collapsTabs{
+  display: none;
+}
+
+
+
+@media (max-width: 979px){
+  .reportsContainer{
+    margin-left: 0;
+  }
+.tabbableContainer .dashbordNavigation{
+    .active a{
+      .vertical(@startColor: rgba(204, 204, 204, 0.31), @endColor: (rgba(0, 0, 0, 0)));
+    }
+    .nav-tabs > li > a{
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+  }
+}
+
+@media (max-width: 678px)
+{
+  .collapsTabsHids{
+    display: none;
+  }
+
+  .collapsTabs{
+    display: block;
+  }
+
+}
