@@ -119,9 +119,76 @@ if (isset($error)) {
         
   
         <hr>
-        <button class="btn btn-large btn-block btn-primary" type="button">post on Facebook</button>
-        <button class="btn btn-large btn-block btn-info" type="button">Twit on twitter</button>
-        <button class="btn btn-large btn-block btn-inverse" type="button">Post on linkedin</button>
+
+<lable style="display:none">
+  
+<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+<script type="IN/Share" data-url="http://recrutmenttest.loomhost.com/recrutment/sharePost/staticPage.html"></script>
+
+
+</lable>
+
+
+
+
+
+
+
+
+
+
+
+        <button class="btn btn-large btn-block btn-inverse" type="button">post on LinkdIn</button>
+
+  <?php 
+   class ShareButton
+  {
+    private static function get_tweets($url)
+    {
+      $api = "http://urls.api.twitter.com/1/urls/count.json?url=";
+
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+      curl_setopt($ch, CURLOPT_URL, $api.$url);
+      $result = json_decode(curl_exec($ch));
+
+      return $result->count;
+    }
+    public static function tweet($url, $text = '', $placeholder = 'Tweet')
+    {
+      $text   = urlencode($text);
+      $url    = urlencode($url);
+      $tweets = self::get_tweets($url);
+      $button = sprintf('<a target="_blank" data-count="%d" title="Share on Twitter" href="http://twitter.com/share?text=%s&url=%s" class="btn btn-large btn-block span6 btn-info cusBut" rel="nofollow">%s</a>​​​​​', $tweets, $text, $url, $placeholder);
+      return $button;
+    }
+  }
+  echo ShareButton::tweet('http://blog.idered.pl/post/create-custom-twitter-share-button', 'Create custom Twitter share button', 'Twit on twitter');
+   ?>
+
+       
+        <a 
+          style="display: none;visibility: hidden;"
+          class="btn btn-large btn-block btn-primary"
+          name="fb_share" 
+          id="fbshare" 
+          type=""
+          share_url="http://recrutmenttest.loomhost.com/recrutment/sharePost/staticPage.html" href=""
+          type="button">
+          <script style="display: none;" src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+
+</a>
+<a id="fb_share" 
+    href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http://aaaaaaaaaaaaaaaaaaaaaaa&amp;p[images][0]=http://www.your-site.com/share-image.jpg&amp;p[title]=My+Site+Title&amp;p[summary]=My+custom+description." target="_blank">
+  <a class="btn btn-large btn-block btn-info" for="fbshare" type="button">post on Facebook</a>
+</a>
+
+
+        <a class="btn btn-large btn-block btn-danger" 
+            href="https://plus.google.com/share?url=http://recrutmenttest.loomhost.com/recrutment/sharePost/staticPage.html"
+            onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+            type="button">Post on Google+</a>
       </div>
     </fieldset>
   </form>
@@ -183,3 +250,12 @@ if (isset($error)) {
   </div> 
 
 </div>
+
+
+
+
+
+
+
+
+

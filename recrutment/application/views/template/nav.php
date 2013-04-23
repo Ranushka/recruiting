@@ -41,7 +41,7 @@
   <div class="tabbable tabs-left" id="tabbableContainer">
 
     <!-- this will hide on screen sixze 467px -->
-    <ul class="nav nav-tabs collapsTabsHids">
+    <ul class="nav nav-tabs collapsTabsHids dashbordNavigation">
 
 
     	 <!-- class====active -->

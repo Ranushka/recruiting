@@ -32,7 +32,7 @@ class JobPosting extends CI_Controller {
 	{
 		$config['upload_path'] = 'uploads/';
 		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '100';
+		$config['max_size']	= '1000';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
 
@@ -41,7 +41,7 @@ class JobPosting extends CI_Controller {
 		if ( ! $this->upload->do_upload('formJobPostingfile'))
 		{
 
-			$data['error'] = array('error' => $this->upload->display_errors());
+			$data['error'] = print_r(array('error' => $this->upload->display_errors()));
 			$data['title'] = ucfirst($page); // Capitalize the first letter
 			$data['containerId'] = $page; // Capitalize the first letter
 
@@ -61,6 +61,16 @@ class JobPosting extends CI_Controller {
 			$this->load->view($page, $data);
 			$this->load->view('template/footer', $data);
 		}
+	}
+
+	public function GoogleShare($page = 'jobPosting')
+	{
+		
+	}
+
+	public function facebookShare($page = 'jobPosting')
+	{
+		
 	}
 
 	
