@@ -360,3 +360,17 @@ $config['proxy_ips'] = '';
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
+
+
+/*
+|--------------------------------------------------------------------------
+| lessc.inc.php
+|--------------------------------------------------------------------------
+| figure out the paths to our folders relative to codeigniter index.php
+| set them in the codeigniter main config file:
+|
+*/
+
+
+$config['relativePath_less'] = "less";
+$config['relativePath_css']  = "css";

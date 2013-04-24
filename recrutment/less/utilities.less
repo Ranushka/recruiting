@@ -65,9 +65,10 @@ margin-left: 120px;
     background-repeat: repeat-x;
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
   }
-.tabbableContainer{
+#tabbableContainer .dashbordNavigation{
   .active a{
-  border-right:thick #FFF solid;
+    margin-right: -1px;
+    border-right-color: #fff;
   .box-shadow(-2px 1px 13px rgba(204, 204, 204, 0.65));
   .horizontal(@startColor: rgba(204, 204, 204, 0.31), @endColor: (rgba(0, 0, 0, 0)));
 
@@ -92,7 +93,7 @@ margin-left: 120px;
 
 // to alocate space to the main navigation
 .reportsContainer{
-  margin-left: 14%;
+ // margin-left: 14%;
 }
 
 // alter the applying Position section
@@ -113,11 +114,16 @@ margin-left: 120px;
   .reportsContainer{
     margin-left: 0;
   }
-.tabbableContainer .dashbordNavigation{
+#tabbableContainer .dashbordNavigation{
     .active a{
+      margin-bottom: -1px;
+    border-bottom-color: #fff;
+    margin-right: 0;
+border-right-color:#ddd;;
+
       .vertical(@startColor: rgba(204, 204, 204, 0.31), @endColor: (rgba(0, 0, 0, 0)));
     }
-    .nav-tabs > li > a{
+    li > a{
       padding-right: 8px;
       padding-left: 8px;
     }

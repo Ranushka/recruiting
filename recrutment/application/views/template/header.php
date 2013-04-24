@@ -8,15 +8,44 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
+<!-- 
 
+-->
+<!-- 
     <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>css/responsive.css" rel="stylesheet">
-
-    
+ -->
+     
     <link type="text/less" href="<?php echo base_url(); ?>less/bootstrap.less" rel="stylesheet/less">
     <link type="text/less" href="<?php echo base_url(); ?>less/responsive.less" rel="stylesheet/less">
+    
 
     <script src="<?php echo base_url(); ?>js/less.js"></script>
+
+<?php 
+
+//where test.less is
+// $relativePath_less = '/less/bootstrap.less';      
+
+// //where you want to put the converted test.css file
+// $relativePath_css = '/css/bootstrap.css'; 
+
+// //where Less.php is
+// $relativePath_lessphp = "../less/lessc.inc.php"; 
+
+
+// //load the LessCss library:
+// $this->load->library('LessCss/lesscss');
+         
+
+// //tell it where the folders are:
+// $this->lesscss->init($relativePath_less,$relativePath_css);
+
+
+   ?>
+
+
+
 
     <script src="<?php echo base_url(); ?>js/jquery.js"></script>
     <script src="<?php echo base_url(); ?>js/mediaCheck.js"></script>

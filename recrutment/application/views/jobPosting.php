@@ -204,6 +204,41 @@ if (isset($error)) {
       </div>
     </fieldset>
   </form>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Interviewer name</th>
+        <th>Interviewer Phone</th>
+        <th>Interviewer Email</th>
+        <th>Last Interview</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>date</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>date</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Larry </td>
+        <td>the Bird</td>
+        <td>the Bird</td>
+        <td>date</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <!-- Modal Posting Jobs Preview-->
