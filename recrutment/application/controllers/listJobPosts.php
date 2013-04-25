@@ -1,14 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class CandidateAplication extends CI_Controller {
+class ListJobPosts extends CI_Controller 
+{
 
-	public function index($page = 'candidateAplication')
+	public function index($page = 'listJobPosts')
 	{
-		//$this->load->view('home');
-
-
-
-
 			
 			if ( ! file_exists('application/views/'.$page.'.php'))
 			{
@@ -18,16 +14,13 @@ class CandidateAplication extends CI_Controller {
 			
 			$data['title'] = ucfirst($page); // Capitalize the first letter
 			$data['containerId'] = $page; // Capitalize the first letter
-
-			$this->load->helper('captcha');
 			
 			$this->load->view('/template/header', $data);
+			$this->load->view('/template/nav', $data);
 			$this->load->view($page, $data);
 			$this->load->view('template/footer', $data);
 
-	}
-
-	
+	}	
 
 }
 

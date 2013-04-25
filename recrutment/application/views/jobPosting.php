@@ -6,13 +6,13 @@
 <?php 
 
 ////
-//// To DO Error hadaling & success msg.
+//// To DO Error handling & success msg.
 ////
 if (isset($SuccesMsg)) {
  echo $SuccesMsg;
 }
 ////
-//// To DO Error hadaling & success msg.
+//// To DO Error handling & success msg.
 ////
 if (isset($error)) {
   echo $error ;
@@ -23,80 +23,135 @@ if (isset($error)) {
 
 
   <?php 
+
+    ////
+    //// $variables
+    ////-----------
+    ////  r_jobPostTicket
+    ////  r_jobPostTitle
+    ////  r_jobPostNumOfPositions
+    ////  r_jobPostClosingDate
+    ////  r_jobPostOpeningDate
+    ////  r_jobPostDiscription
+    ////  r_jobPostGraphic
+    ////
+
     echo form_open_multipart('jobPosting/do_upload',
     $attributes = array('class' => 'form-horizontal', 'id' => 'PostingJobs'));
   ?>
     <fieldset>
       <legend>Posting Jobs on Social Media.</legend>
       <div class="control-group">
-        <label class="control-label" for="formJobTitle">Job Title </label>
+        <label class="control-label" for="r_jobPostTicket">Job Post Ticket is</label>
+        <div class="controls">
+         <span id="r_jobPostTicket" class="label label-warning">GD006</span>
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <label class="control-label" for="r_jobPostTitle">Job Title </label>
         <div class="controls">
           <?php 
-            $formJobTitle = array(
-                'type'        => 'text',
-                'name'        => 'formJobTitle',
-                'id'          => 'formJobTitle',
-                'class'       => 'input-xlarge',
-                'maxlength'   => '100',
-                'autofocus'   => 'autofocus',
-                'required'    => 'required',
-                'placeholder' => 'Ux designer',
+            $r_jobPostTitle = array(
+                  'type'              => 'text',
+                  'name'              => 'r_jobPostTitle',
+                  'id'                => 'r_jobPostTitle',
+                  'class'             => 'input-xlarge',
+                  'maxlength'         => '100',
+                  'autofocus'         => 'autofocus',
+                  'required'          => 'required',
+                  'placeholder'       => 'Ux designer',
               );
-              echo form_input($formJobTitle);
+              echo form_input($r_jobPostTitle);
+          ?>
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <label class="control-label" for="r_jobPostNumOfPositions">Available positions</label>
+        <div class="controls">
+          <?php 
+          $r_jobPostNumOfPositions = array(
+                    '1positions' => '1',
+                    '2positions' => '2',
+                    '3positions' => '3',
+                    '4positions' => '4',
+                    '5positions' => '5'
+                );
+          echo form_dropdown('formSelectJobTitle', $r_jobPostNumOfPositions);
           ?>
         </div>
       </div>
   
   
       <div class="control-group">
-        <label class="control-label">Uploard Priod :</label>
+        <label class="control-label">Active Time </label>
         <div class="controls">
           <div class="control-group">
-            <label class="control-label" for="formStartDate">start date </label>
+            <label class="control-label" for="r_jobPostOpeningDate">start date </label>
             <div class="controls">
               <?php 
-                $formStartDate = array(
+                $r_jobPostOpeningDate = array(
                     'type'        => 'date',
-                    'name'        => 'formStartDate',
-                    'id'          => 'formStartDate',
+                    'name'        => 'r_jobPostOpeningDate',
+                    'id'          => 'r_jobPostOpeningDate',
                     'class'       => 'input-medium',
                     'maxlength'   => '100',
                     'required'    => 'required',
                     'placeholder' => 'yyyy/mm/dd',
                   );
-                  echo form_input($formStartDate);
+                  echo form_input($r_jobPostOpeningDate);
               ?>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="formEndDate">end date </label>
+            <label class="control-label" for="r_jobPostClosingDate">end date </label>
             <div class="controls">
               <?php 
-                $formEndDate = array(
+                $r_jobPostClosingDate = array(
                     'type'        => 'date',
-                    'name'        => 'formEndDate',
-                    'id'          => 'formEndDate',
+                    'name'        => 'r_jobPostClosingDate',
+                    'id'          => 'r_jobPostClosingDate',
                     'class'       => 'input-medium',
                     'maxlength'   => '100',
                     'required'    => 'required',
                     'placeholder' => 'yyyy/mm/dd',
                   );
-                  echo form_input($formEndDate);
+                  echo form_input($r_jobPostClosingDate);
               ?>
             </div>
           </div>
         </div>
       </div>
-  
-  
+
+
       <div class="control-group">
-        <label class="control-label" for="fileInput">Related grapic </label>
+        <label class="control-label" for="r_jobPostDiscription">Description for post</label>
         <div class="controls">
           <?php 
-            $formJobPostingfile = array(
+          $r_jobPostDiscription = array(
+            'name'        => 'r_jobPostDiscription',
+            'id'          => 'r_jobPostDiscription',
+            'class'       => 'input-xlarge',
+            'maxlength'   => '200',
+            'placeholder' => 'Description will be goes on top of the graphic',
+            );
+          echo form_textarea($r_jobPostDiscription);
+          ?>
+        </div>
+      </div>
+
+  
+      <div class="control-group">
+        <label class="control-label" for="r_jobPostGraphic">Related graphic </label>
+        <div class="controls">
+          <?php 
+            $r_jobPostGraphic = array(
                 'type'        => 'file',
-                'name'        => 'formJobPostingfile',
-                'id'          => 'formJobPostingfile',
+                'name'        => 'r_jobPostGraphic',
+                'id'          => 'r_jobPostGraphic',
                 'class'       => 'input-file',
                 'maxlength'   => '100',
                 'placeholder' => 'select grapic art',
@@ -104,7 +159,7 @@ if (isset($error)) {
                 'accept'      => 'image/*',
                 'onchange'    => 'readURL(this);',
               );
-              echo form_input($formJobPostingfile);
+              echo form_input($r_jobPostGraphic);
           ?>
 
           <input class="btn btn-success" type="submit" value="A upload" />

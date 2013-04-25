@@ -12,12 +12,13 @@
 				<li><a href="candidateAplication.php">Candidate Application</a></li>
 				<li><a href="#">Contact</a></li>
 			  	<li class="divider"></li>
-			    <li class=""><a href="#lA" data-toggle="tab">Job posting</a></li>
-			    <li class=""><a href="#lB" data-toggle="tab">Interviewer</a></li>
-			    <li class=""><a href="#lC" data-toggle="tab">scheduling</a></li>
-			    <li class=""><a href="#lD" data-toggle="tab">Add Criteria</a></li>
-			    <li class=""><a href="#lE" data-toggle="tab">List Applicants</a></li>
-			    <li class=""><a href="#lF" data-toggle="tab">Repots</a></li>
+			    <li class=""><a href="#jobPosting" data-toggle="tab">Job posting</a></li>
+			    <li class=""><a href="#listJobPosts" data-toggle="tab">list Job Posts</a></li>
+			    <li class=""><a href="#interviewer" data-toggle="tab">Interviewer</a></li>
+			    <li class=""><a href="#scheduling" data-toggle="tab">scheduling</a></li>
+			    <li class=""><a href="#defineCriteria" data-toggle="tab">Add Criteria</a></li>
+			    <li class=""><a href="#listApplicants" data-toggle="tab">List Applicants</a></li>
+			    <li class=""><a href="#repots" data-toggle="tab">Repots</a></li>
 
 			  </ul>
 			</div>
@@ -44,14 +45,14 @@
     <ul class="nav nav-tabs collapsTabsHids dashbordNavigation">
 
 
-    	 <!-- class====active -->
-
-
       <li id="home">
       	<a href="<?php echo base_url(); ?>index.php/home">Home</a>
       </li>
       <li id="jobPosting">
       	<a href="<?php echo base_url(); ?>index.php/jobPosting">Job posting</a>
+      </li>
+      <li id="listJobPosts">
+      	<a href="<?php echo base_url(); ?>index.php/listJobPosts">list Job Posts</a>
       </li>
       <li id="interviewer">
       	<a href="<?php echo base_url(); ?>index.php/interviewer">Interviewer</a>
