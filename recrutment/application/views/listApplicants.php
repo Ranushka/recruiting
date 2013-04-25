@@ -1,4 +1,4 @@
-<div class="tab-pane active" id="lE">
+<div class="tab-pane active listApplicants" id="lE">
 
   <?php 
     echo form_open('email/send',
