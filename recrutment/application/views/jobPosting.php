@@ -28,6 +28,7 @@ if (isset($error)) {
     //// $variables
     ////-----------
     ////  r_jobPostTicket
+    ////  r_jobPostCategory
     ////  r_jobPostTitle
     ////  r_jobPostNumOfPositions
     ////  r_jobPostClosingDate
@@ -50,7 +51,24 @@ if (isset($error)) {
 
 
       <div class="control-group">
-        <label class="control-label" for="r_jobPostTitle">Job Title </label>
+        <label class="control-label" for="r_jobPostCategory">Job category </label>
+        <div class="controls">
+          <?php 
+          $r_jobPostCategory = array(
+                    '1category' => 'php',
+                    '2category' => 'designer',
+                    '3category' => 'dsad',
+                    '4category' => 'dsad',
+                    '5category' => 'dsa'
+                );
+          echo form_dropdown('formSelectJobTitle', $r_jobPostCategory);
+          ?>
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <label class="control-label" for="r_jobPostTitle">Job Post Title </label>
         <div class="controls">
           <?php 
             $r_jobPostTitle = array(
@@ -84,7 +102,7 @@ if (isset($error)) {
           ?>
         </div>
       </div>
-  
+
   
       <div class="control-group">
         <label class="control-label">Active Time </label>

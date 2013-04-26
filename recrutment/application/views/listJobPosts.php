@@ -6,7 +6,8 @@
     //// $variables
     ////-----------
     ////  r_jobPostNumOfPositions
-    ////
+    ////  r_jobPostTitle
+    ////  
 
 
     echo form_open_multipart('email/send',
@@ -20,7 +21,7 @@
           <div class="controls">
             <?php 
             $r_jobPostNumOfPositions = array(
-                    ''                => '-select job title-',
+                    ''                => '-select job category-',
                     'PHPProgrammer'   => 'PHP Programmer',
                     'Graphicdesigner' => 'Graphic designer',
                     'UIengineer'      => 'UI engineer',
@@ -30,6 +31,24 @@
             ?>
           </div>
       </div>
+
+
+      <div class="control-group">
+        <label class="control-label" for="r_jobPostTitle">Select Job post Title</label>
+          <div class="controls">
+            <?php 
+            $r_jobPostTitle = array(
+                    ''                => '-select job title-',
+                    'PHPProgrammer'   => 'PHP Programmer',
+                    'Graphicdesigner' => 'Graphic designer',
+                    'UIengineer'      => 'UI engineer',
+                    'UXdeveloper'     => 'UX developer',
+                  );
+            echo form_dropdown('formSelectJobTitle', $r_jobPostTitle);
+            ?>
+          </div>
+      </div>
+
 
       <div class="form-actions">
         <button type="submit" class="btn btn-success">List posts for ux Developer</button>
