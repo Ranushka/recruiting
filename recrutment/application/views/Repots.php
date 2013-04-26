@@ -8,10 +8,9 @@
 
     <ul class="nav nav-tabs">
       <li class="active"><a href="#candidateReport" data-toggle="tab">Candidate Reports</a></li>
-      <li><a href="#shadulingReport" data-toggle="tab">Shaduling Reports</a></li>
+      <li><a href="#shadulingReport" data-toggle="tab">Scheduling Reports</a></li>
       <li><a href="#jobPostingReport" data-toggle="tab">Job Posting Reports</a></li>
     </ul>
-
 
     <div class="tab-content">
 

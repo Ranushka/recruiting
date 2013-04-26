@@ -37,7 +37,7 @@ if (isset($error)) {
     ////  r_jobPostGraphic
     ////
 
-    echo form_open_multipart('jobPosting/do_upload',
+    echo form_open_multipart('jobPosting/jobPostingCreate',
     $attributes = array('class' => 'form-horizontal', 'id' => 'PostingJobs'));
   ?>
     <fieldset>
@@ -46,6 +46,7 @@ if (isset($error)) {
         <label class="control-label" for="r_jobPostTicket">Job Post Ticket is</label>
         <div class="controls">
          <span id="r_jobPostTicket" class="label label-warning">GD006</span>
+         <input type="hidden" name="r_jobPostTicket" value="GD006">
         </div>
       </div>
 
@@ -161,6 +162,7 @@ if (isset($error)) {
         </div>
       </div>
 
+      <input class="btn btn-success" type="submit" name="SaveData" value="Save data" />
   
       <div class="control-group">
         <label class="control-label" for="r_jobPostGraphic">Related graphic </label>

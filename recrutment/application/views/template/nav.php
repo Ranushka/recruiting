@@ -16,7 +16,7 @@
 			    <li class=""><a href="#listJobPosts" data-toggle="tab">list Job Posts</a></li>
 			    <li class=""><a href="#interviewer" data-toggle="tab">Interviewer</a></li>
 			    <li class=""><a href="#scheduling" data-toggle="tab">scheduling</a></li>
-			    <li class=""><a href="#defineCriteria" data-toggle="tab">Add Criteria</a></li>
+			    <li class=""><a href="#defineCriteria" data-toggle="tab">Define Criteria</a></li>
 			    <li class=""><a href="#listApplicants" data-toggle="tab">List Applicants</a></li>
 			    <li class=""><a href="#repots" data-toggle="tab">Repots</a></li>
 
@@ -57,14 +57,14 @@
       <li id="interviewer">
       	<a href="<?php echo base_url(); ?>index.php/interviewer">Interviewer</a>
       </li>
-      <li id="scheduling">
-      	<a href="<?php echo base_url(); ?>index.php/scheduling">scheduling</a>
-      </li>
       <li id="defineCriteria">
-      	<a href="<?php echo base_url(); ?>index.php/defineCriteria">Add Criteria</a>
+      	<a href="<?php echo base_url(); ?>index.php/defineCriteria">Define Criteria</a>
       </li>
       <li id="listApplicants">
       	<a href="<?php echo base_url(); ?>index.php/listApplicants">List Applicants</a>
+      </li>
+      <li id="scheduling">
+      	<a href="<?php echo base_url(); ?>index.php/scheduling">scheduling</a>
       </li>
       <li id="repots">
       	<a href="<?php echo base_url(); ?>index.php/repots">Repots</a>

@@ -1,0 +1,62 @@
+ALL variabls
+
+    ////	Job Post
+    //// $variables
+    ////-----------
+    ////  r_jobPostTicket
+    ////  r_jobPostCategory
+    ////  r_jobPostTitle
+    ////  r_jobPostNumOfPositions
+    ////  r_jobPostClosingDate
+    ////  r_jobPostOpeningDate
+    ////  r_jobPostDiscription
+    ////  r_jobPostGraphic
+    ////
+
+
+    ////	list Post
+    //// $variables
+    ////-----------
+    ////  r_jobPostCategory
+    ////  r_selectJobTitle
+    ////
+
+    ////	Interviewer 
+    //// $variables
+    ////-----------
+    ////  r_InterviewerName
+    ////  r_InterviewerPhone
+    ////  r_InterviewerEmail
+    //// 
+
+    ////	Define Criteria
+    //// $variables
+    ////-----------
+    ////  r_selectJobTitle
+    ////  r_CriteriaName
+    ////  r_CriteriaWattage
+    ////
+
+   	////	List aplicents
+    //// $variables
+    ////-----------
+    ////  r_selectJobTitle
+    ////  r_selectJobCategory
+    ////
+
+    ////	scheduling
+    //// $variables
+    ////-----------
+    ////  r_selectJobTitle
+    ////  r_InterviewSchedulingDate
+    ////  r_InterviewSchedulingStartTime
+    ////  r_InterviewSchedulingTimeGap
+    //// 
+
+
+
+
+
+
+
+

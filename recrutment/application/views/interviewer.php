@@ -1,6 +1,14 @@
 <div class="tab-pane container-narrow active">
   
   <?php 
+
+    ////
+    //// $variables
+    ////-----------
+    ////  r_InterviewerName
+    ////  r_InterviewerPhone
+    ////  r_InterviewerEmail
+    //// 
     echo form_open_multipart('email/send',
     $attributes = array('class' => 'form-horizontal', 'id' => 'interviewer'));
   ?>
@@ -8,56 +16,58 @@
       <legend>Interviewer managing</legend>
 
       <div class="control-group">
-        <label class="control-label" for="formInterviewerName">Interviewer name</label>
+        <label class="control-label" for="r_InterviewerName">Interviewer name</label>
         <div class="controls">
           <?php 
-            $formInterviewerName = array(
+            $r_InterviewerName = array(
                 'type'        => 'text',
-                'name'        => 'formInterviewerName',
-                'id'          => 'formInterviewerName',
+                'name'        => 'r_InterviewerName',
+                'id'          => 'r_InterviewerName',
                 'class'       => 'input-xlarge',
                 'maxlength'   => '100',
                 'autofocus'   => 'autofocus',
                 'required'    => 'required',
                 'placeholder' => 'Johon Doe',
               );
-              echo form_input($formInterviewerName);
+              echo form_input($r_InterviewerName);
           ?>
         </div>
       </div>
 
+
       <div class="control-group">
-        <label class="control-label" for="formInterviewerPhone">Phone number</label>
+        <label class="control-label" for="r_InterviewerPhone">Phone number</label>
         <div class="controls">
           <?php 
-            $formInterviewerPhone = array(
+            $r_InterviewerPhone = array(
                 'type'        => 'tel',
-                'name'        => 'formInterviewerPhone',
-                'id'          => 'formInterviewerPhone',
+                'name'        => 'r_InterviewerPhone',
+                'id'          => 'r_InterviewerPhone',
                 'class'       => 'input-xlarge',
                 'maxlength'   => '100',
                 'required'    => 'required',
                 'placeholder' => '071545454',
               );
-              echo form_input($formInterviewerPhone);
+              echo form_input($r_InterviewerPhone);
           ?>
         </div>
       </div>
 
+
       <div class="control-group">
-        <label class="control-label" for="formInterviewerEmail">Interviewer Email</label>
+        <label class="control-label" for="r_InterviewerEmail">Interviewer Email</label>
         <div class="controls">
           <?php 
-            $formInterviewerEmail = array(
+            $r_InterviewerEmail = array(
                 'type'        => 'email',
-                'name'        => 'formInterviewerEmail',
-                'id'          => 'formInterviewerEmail',
+                'name'        => 'r_InterviewerEmail',
+                'id'          => 'r_InterviewerEmail',
                 'class'       => 'input-xlarge',
                 'maxlength'   => '100',
                 'required'    => 'required',
                 'placeholder' => 'johon@mail.com',
               );
-              echo form_input($formInterviewerEmail);
+              echo form_input($r_InterviewerEmail);
           ?>
         </div>
       </div>

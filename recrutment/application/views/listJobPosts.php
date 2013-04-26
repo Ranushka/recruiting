@@ -5,8 +5,8 @@
     ////
     //// $variables
     ////-----------
-    ////  r_jobPostNumOfPositions
-    ////  r_jobPostTitle
+    ////  r_jobPostCategory
+    ////  r_selectJobTitle
     ////  
 
 
@@ -17,34 +17,34 @@
       <legend>Please select criteria to list Job Postings</legend>
 
       <div class="control-group">
-        <label class="control-label" for="r_jobPostNumOfPositions">Select Job category</label>
-          <div class="controls">
-            <?php 
-            $r_jobPostNumOfPositions = array(
-                    ''                => '-select job category-',
-                    'PHPProgrammer'   => 'PHP Programmer',
-                    'Graphicdesigner' => 'Graphic designer',
-                    'UIengineer'      => 'UI engineer',
-                    'UXdeveloper'     => 'UX developer',
-                  );
-            echo form_dropdown('formSelectJobTitle', $r_jobPostNumOfPositions);
-            ?>
-          </div>
+        <label class="control-label" for="r_jobPostCategory">Select Job category </label>
+        <div class="controls">
+          <?php 
+          $r_jobPostCategory = array(
+                    '1category' => 'php',
+                    '2category' => 'designer',
+                    '3category' => 'dsad',
+                    '4category' => 'dsad',
+                    '5category' => 'dsa'
+                );
+          echo form_dropdown($r_jobPostCategory);
+          ?>
+        </div>
       </div>
 
 
       <div class="control-group">
-        <label class="control-label" for="r_jobPostTitle">Select Job post Title</label>
+        <label class="control-label" for="r_selectJobTitle">Select Job post Title</label>
           <div class="controls">
             <?php 
-            $r_jobPostTitle = array(
+            $r_selectJobTitle = array(
                     ''                => '-select job title-',
                     'PHPProgrammer'   => 'PHP Programmer',
                     'Graphicdesigner' => 'Graphic designer',
                     'UIengineer'      => 'UI engineer',
                     'UXdeveloper'     => 'UX developer',
                   );
-            echo form_dropdown('formSelectJobTitle', $r_jobPostTitle);
+            echo form_dropdown('PHPProgrammer', $r_selectJobTitle);
             ?>
           </div>
       </div>

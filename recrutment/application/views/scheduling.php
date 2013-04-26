@@ -1,6 +1,15 @@
 <div class="tab-pane container-narrow active">
 
   <?php 
+
+    ////
+    //// $variables
+    ////-----------
+    ////  r_selectJobTitle
+    ////  r_InterviewSchedulingDate
+    ////  r_InterviewSchedulingStartTime
+    ////  r_InterviewSchedulingTimeGap
+    //// 
     echo form_open('email/send',
     $attributes = array('class' => 'form-horizontal container-narrow', 'id' => 'interviewsScheduling'));
   ?>
@@ -9,73 +18,73 @@
 
       
       <div class="control-group">
-        <label class="control-label" for="formSelectJobTitle">Select Job title</label>
-        <div class="controls">
-          <?php 
-          $formSelectJobTitleOptions = array(
-                  ''                => '-select job title-',
-                  'PHPProgrammer'   => 'PHP Programmer',
-                  'Graphicdesigner' => 'Graphic designer',
-                  'UIengineer'      => 'UI engineer',
-                  'UXdeveloper'     => 'UX developer',
-                );
-          echo form_dropdown('formSelectJobTitle', $formSelectJobTitleOptions);
-          ?>
-        </div>
+        <label class="control-label" for="r_selectJobTitle">Select Job post Title</label>
+          <div class="controls">
+            <?php 
+            $r_selectJobTitle = array(
+                    ''                => '-select job title-',
+                    'PHPProgrammer'   => 'PHP Programmer',
+                    'Graphicdesigner' => 'Graphic designer',
+                    'UIengineer'      => 'UI engineer',
+                    'UXdeveloper'     => 'UX developer',
+                  );
+            echo form_dropdown('PHPProgrammer', $r_selectJobTitle);
+            ?>
+          </div>
       </div>
 
 
       <div class="control-group">
-        <label class="control-label" for="formschedulingDate">scheduling Date</label>
+        <label class="control-label" for="r_InterviewSchedulingDate">scheduling Date</label>
         <div class="controls">
           <?php 
-          $formschedulingDate = array(
+          $r_InterviewSchedulingDate = array(
             'type'        => 'date',
-            'name'        => 'formschedulingDate',
-            'id'          => 'formschedulingDate',
+            'name'        => 'r_InterviewSchedulingDate',
+            'id'          => 'r_InterviewSchedulingDate',
             'class'       => 'input-xlarge',
             'maxlength'   => '100',
             'required'    => 'required',
             'placeholder' => 'yyyy/mm/dd',
             );
-          echo form_input($formschedulingDate);
+          echo form_input($r_InterviewSchedulingDate);
           ?>
         </div>
       </div>
 
        <div class="control-group">
-          <label class="control-label" for="formStartDate">start date </label>
+          <label class="control-label" for="r_InterviewSchedulingStartTime">start time </label>
           <div class="controls">
             <?php 
-              $formStartDate = array(
+              $r_InterviewSchedulingStartTime = array(
                   'type'        => 'date',
-                  'name'        => 'formStartDate',
-                  'id'          => 'formStartDate',
+                  'name'        => 'r_InterviewSchedulingStartTime',
+                  'id'          => 'r_InterviewSchedulingStartTime',
                   'class'       => 'input-xlarge',
                   'maxlength'   => '100',
                   'required'    => 'required',
                   'placeholder' => 'yyyy/mm/dd',
                 );
-                echo form_input($formStartDate);
+                echo form_input($r_InterviewSchedulingStartTime);
             ?>
           </div>
         </div>
 
       <div class="control-group">
-        <label class="control-label" for="timeGap">time gap</label>
+        <label class="control-label" for="r_InterviewSchedulingTimeGap">time gap</label>
         <div class="controls">
           <?php 
-            $formCriteriaName = array(
+            $r_InterviewSchedulingTimeGap = array(
                 'type'        => 'number',
-                'name'        => 'formCriteriaName',
-                'id'          => 'formCriteriaName',
+                'name'        => 'r_InterviewSchedulingTimeGap',
+                'id'          => 'r_InterviewSchedulingTimeGap',
                 'class'       => 'input-xlarge',
                 'min'         => '0',
                 'max'         => '100',
                 'step'        => '5',
                 'placeholder' => '10',
               );
-              echo form_input($formCriteriaName);
+              echo form_input($r_InterviewSchedulingTimeGap);
           ?>
         </div>
       </div>

@@ -1,6 +1,14 @@
 <div class="tab-pane container-narrow active">
   
   <?php 
+
+    ////
+    //// $variables
+    ////-----------
+    ////  r_selectJobTitle
+    ////  r_CriteriaName
+    ////  r_CriteriaWattage
+    ////
     echo form_open('email/send',
     $attributes = array('class' => 'form-horizontal container-narrow', 'id' => 'defineCriteria'));
   ?>
@@ -8,47 +16,47 @@
       <legend>Define Criteria</legend>
   
       <div class="control-group">
-        <label class="control-label" for="formSelectJobTitle">Select Job title</label>
-        <div class="controls">
-          <?php 
-          $formSelectJobTitleOptions = array(
-                  ''                => '-select job title-',
-                  'PHPProgrammer'   => 'PHP Programmer',
-                  'Graphicdesigner' => 'Graphic designer',
-                  'UIengineer'      => 'UI engineer',
-                  'UXdeveloper'     => 'UX developer',
-                );
-          echo form_dropdown('formSelectJobTitle', $formSelectJobTitleOptions);
-          ?>
-        </div>
+        <label class="control-label" for="r_selectJobTitle">Select Job post Title</label>
+          <div class="controls">
+            <?php 
+            $r_selectJobTitle = array(
+                    ''                => '-select job title-',
+                    'PHPProgrammer'   => 'PHP Programmer',
+                    'Graphicdesigner' => 'Graphic designer',
+                    'UIengineer'      => 'UI engineer',
+                    'UXdeveloper'     => 'UX developer',
+                  );
+            echo form_dropdown('PHPProgrammer', $r_selectJobTitle);
+            ?>
+          </div>
       </div>
   
       <div class="control-group">
-        <label class="control-label" for="formCriteriaName">Criteria name</label>
+        <label class="control-label" for="r_CriteriaName">Criteria name</label>
         <div class="controls">
           <?php 
-            $formCriteriaName = array(
+            $r_CriteriaName = array(
                 'type'        => 'text',
-                'name'        => 'formCriteriaName',
-                'id'          => 'formCriteriaName',
+                'name'        => 'r_CriteriaName',
+                'id'          => 'r_CriteriaName',
                 'class'       => 'input-xlarge',
                 'maxlength'   => '100',
                 'required'    => 'required',
                 'placeholder' => 'Creativness',
               );
-              echo form_input($formCriteriaName);
+              echo form_input($r_CriteriaName);
           ?>
         </div>
       </div>
   
       <div class="control-group">
-        <label class="control-label" for="defineWatage">Define wattage</label>
+        <label class="control-label" for="r_CriteriaWattage">Define wattage</label>
         <div class="controls">
           <?php 
-            $formCriteriaName = array(
+            $r_CriteriaWattage = array(
                 'type'        => 'number',
-                'name'        => 'formCriteriaName',
-                'id'          => 'formCriteriaName',
+                'name'        => 'r_CriteriaWattage',
+                'id'          => 'r_CriteriaWattage',
                 'class'       => 'input-xlarge',
                 'min'         => '0',
                 'max'         => '100',
@@ -56,7 +64,7 @@
                 'value'       => '10',
                 'placeholder' => '10',
               );
-              echo form_input($formCriteriaName);
+              echo form_input($r_CriteriaWattage);
           ?>
         </div>
       </div>
