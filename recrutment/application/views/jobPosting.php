@@ -4,13 +4,6 @@
 
 
 <?php 
-
-////
-//// To DO Error handling & success msg.
-////
-if (isset($SuccesMsg)) {
- echo $SuccesMsg;
-}
 ////
 //// To DO Error handling & success msg.
 ////
@@ -19,6 +12,23 @@ if (isset($error)) {
 }
 
 ?>
+
+<?php 
+
+////
+//// This success message will display in case of.
+////  successfully saved data
+////
+  if (isset($SuccesMsg)) 
+  {
+    echo '<div class="alert alert-success">
+            <a class="close" data-dismiss="alert">&times;</a>
+            '.$SuccesMsg.'
+          </div>';
+  } 
+
+?>
+
 
 
 
@@ -56,13 +66,16 @@ if (isset($error)) {
         <div class="controls">
           <?php 
           $r_jobPostCategory = array(
-                    '1category' => 'php',
-                    '2category' => 'designer',
-                    '3category' => 'dsad',
-                    '4category' => 'dsad',
-                    '5category' => 'dsa'
+                    'php' => 'php',
+                    'Java' => 'Java',
+                    '.Net' => '.NET',
+                    'Administrator' => 'Administrator',
+                    'Manager' => 'Manager',
+                    'Consultant' => 'Consultant',
+                    'Designer' => 'dsa',
+                    'Architect' => 'dsa'
                 );
-          echo form_dropdown('formSelectJobTitle', $r_jobPostCategory);
+          echo form_dropdown('r_jobPostCategory', $r_jobPostCategory);
           ?>
         </div>
       </div>
@@ -99,7 +112,7 @@ if (isset($error)) {
                     '4positions' => '4',
                     '5positions' => '5'
                 );
-          echo form_dropdown('formSelectJobTitle', $r_jobPostNumOfPositions);
+          echo form_dropdown('r_jobPostNumOfPositions', $r_jobPostNumOfPositions);
           ?>
         </div>
       </div>
@@ -162,7 +175,6 @@ if (isset($error)) {
         </div>
       </div>
 
-      <input class="btn btn-success" type="submit" name="SaveData" value="Save data" />
   
       <div class="control-group">
         <label class="control-label" for="r_jobPostGraphic">Related graphic </label>
@@ -186,6 +198,7 @@ if (isset($error)) {
 
         </div>
       </div>
+      <input class="btn btn-success" type="submit" name="SaveData" value="Create Article" />
   
       <div class="form-actions">
         <button class="btn">Cancel</button>
@@ -280,38 +293,121 @@ if (isset($error)) {
     </fieldset>
   </form>
 
-  <table class="table table-hover">
+
+
+
+<!-- <div id="albumWrapper" ng-controller="FetchCtrl">
+    <div id="header">
+        <h2>{{currentImage.description}}</h2>
+
+        <select ng-model="categories"
+                ng-options="category for category in imageCategories">
+            <option value="">all</option>
+        </select>
+    </div>
+
+    <div id="albumImage">
+        <img ng-src="{{currentImage.image}}" alt="{{currentImage.description}}">
+    </div>
+    <div id="thumbWrapper">
+        <!-- <ul id="thumbList">
+            <li ng-repeat="image in images | filter:categories" ng-click="setCurrentImage(image)">
+                <img ng-src="{{image.thumbnail}}" alt="{{image.description}}">
+            </li>
+        </ul> -->
+
+
+<!--         <ul class="unstyled">
+          <li ng-repeat="todo in todos">
+            
+          </li>
+        </ul>
+
+
+    </div>
+</div>
+ --> 
+<!-- 
+<div ng-controller="FetchCtrl">
+
+    <select ng-model="method">
+      <option>GET</option>
+      <option>JSONP</option>
+    </select>
+    <input type="text" ng-model="url" size="80"/>
+    <button ng-click="fetch()">fetch</button><br>
+    <button ng-click="updateModel('GET', 'http-hello.html')">Sample GET</button>
+    <button ng-click="updateModel('JSONP', 'http://angularjs.org/greet.php?callback=&name=Super%20Hero')">Sample JSONP</button>
+    <button ng-click="updateModel('JSONP', 'http://angularjs.org/doesntexist&callback=JSON_CALLBACK')">Invalid JSONP</button>
+    <pre>http status code: {{status}}</pre>
+    <pre>http response data: {{data}}</pre>
+ 
+  
+</div> -->
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  
+    $('#r_jobPostAllList').dataTable();
+
+  
+
+
+
+
+  /* attach a submit handler to the form */
+  
+      /* stop form from submitting normally */
+    
+
+      /*clear result div*/
+       $("#result").html('');
+
+      /* get some values from elements on the page: */
+       var values = $(this).serialize();
+
+      /* Send the data using post and put the results in a div */
+        $.ajax({
+          url: "http://localhost/a/trunk/recrutment/index.php/jobPosting/listAllJobposts",
+          type: "post",
+          data: values,
+          success: function(){
+              alert("success");
+               $("#result").html('submitted successfully');
+          },
+          error:function(){
+              alert("failure");
+              $("#result").html('there is error while submit');
+          }   
+        }); 
+   
+
+
+
+});
+
+
+
+     
+</script>
+
+
+
+  <table class="table table-hover" id='r_jobPostAllList'>
     <thead>
       <tr>
-        <th>#</th>
-        <th>Interviewer name</th>
-        <th>Interviewer Phone</th>
-        <th>Interviewer Email</th>
-        <th>Last Interview</th>
+        <th>Ticket</th>
+        <th>Category</th>
+        <th>Title</th>
+        <th># Positions</th>
+        <th>Closing Date</th>
+        <th>Opening Date</th>
+        <th>Discription</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>date</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>date</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Larry </td>
-        <td>the Bird</td>
-        <td>the Bird</td>
-        <td>date</td>
-      </tr>
+    <tbody id='result'>
+      
     </tbody>
   </table>
   

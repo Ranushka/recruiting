@@ -107,8 +107,8 @@ class Sample extends CI_Controller
         );
 
         // Allow edit/delete only for items with the current IP address
-        $commands['delete']['filters'] = array(7 => array('value' => $this->input->ip_address()));
-        $commands['edit']['filters'] = array(7 => array('value' => $this->input->ip_address()));
+        // $commands['delete']['filters'] = array(7 => array('value' => $this->input->ip_address()));
+        // $commands['edit']['filters'] = array(7 => array('value' => $this->input->ip_address()));
         // Don't show multiple delete button
         $commands['delete']['toolbar'] = FALSE;
 

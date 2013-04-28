@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0065)http://twitter.github.io/bootstrap/examples/marketing-narrow.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" ng-app><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,8 @@
 <!-- 
 
 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/todo.js"></script>
 <!-- 
     <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>css/responsive.css" rel="stylesheet">
@@ -49,6 +51,12 @@
 
     <script src="<?php echo base_url(); ?>js/jquery.js"></script>
     <script src="<?php echo base_url(); ?>js/mediaCheck.js"></script>
+    
+
+    <script src="<?php echo base_url(); ?>js/jqueryDataTables.js"></script>
+
+
+
 
     
     <style type="text/css">
